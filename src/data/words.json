@@ -1,0 +1,122 @@
+[
+  {
+    "id": "book",
+    "word": "book",
+    "cn": "书",
+    "cat": "日常",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word book.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "desk",
+    "word": "desk",
+    "cn": "书桌",
+    "cat": "日常",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word desk.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "window",
+    "word": "window",
+    "cn": "窗户",
+    "cat": "日常",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word window.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "garden",
+    "word": "garden",
+    "cn": "花园",
+    "cat": "日常",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word garden.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "water",
+    "word": "water",
+    "cn": "水",
+    "cat": "日常",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word water.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "apple",
+    "word": "apple",
+    "cn": "苹果",
+    "cat": "日常",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word apple.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "learn",
+    "word": "learn",
+    "cn": "学习",
+    "cat": "动作",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word learn.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "write",
+    "word": "write",
+    "cn": "写字",
+    "cat": "动作",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word write.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "read",
+    "word": "read",
+    "cn": "阅读",
+    "cat": "动作",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word read.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "walk",
+    "word": "walk",
+    "cn": "步行",
+    "cat": "动作",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word walk.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "open",
+    "word": "open",
+    "cn": "打开",
+    "cat": "动作",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word open.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  },
+  {
+    "id": "close",
+    "word": "close",
+    "cn": "关闭",
+    "cat": "动作",
+    "phonetic": "",
+    "pos": "",
+    "example": "This practice card contains the word close.",
+    "mnemonic": "把单词放入自己写的一句话中。"
+  }
+]

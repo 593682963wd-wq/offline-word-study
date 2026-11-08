@@ -1,0 +1,58 @@
+{
+  "agent": [
+    [
+      {
+        "speaker": "我方",
+        "zh": "我们一起练习这个单词吧。",
+        "en": "Let us practice this word together."
+      },
+      {
+        "speaker": "对方",
+        "zh": "好的，我会写一个简单句子。",
+        "en": "Yes. I will write a simple sentence."
+      }
+    ]
+  ],
+  "atc": [
+    [
+      {
+        "speaker": "我方",
+        "zh": "我们一起练习这个单词吧。",
+        "en": "Let us practice this word together."
+      },
+      {
+        "speaker": "对方",
+        "zh": "好的，我会写一个简单句子。",
+        "en": "Yes. I will write a simple sentence."
+      }
+    ]
+  ],
+  "emergency": [
+    [
+      {
+        "speaker": "我方",
+        "zh": "我们一起练习这个单词吧。",
+        "en": "Let us practice this word together."
+      },
+      {
+        "speaker": "对方",
+        "zh": "好的，我会写一个简单句子。",
+        "en": "Yes. I will write a simple sentence."
+      }
+    ]
+  ],
+  "weather": [
+    [
+      {
+        "speaker": "我方",
+        "zh": "我们一起练习这个单词吧。",
+        "en": "Let us practice this word together."
+      },
+      {
+        "speaker": "对方",
+        "zh": "好的，我会写一个简单句子。",
+        "en": "Yes. I will write a simple sentence."
+      }
+    ]
+  ]
+}

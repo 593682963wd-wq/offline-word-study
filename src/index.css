@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+/* ============ 词语练习 · 深空霓虹科技风（学习 Flash 设计系统并超越） ============ */
+:root {
+  --bg-0: #03060d;
+  --bg-1: #060b18;
+  --bg-2: #081020;
+  --card: rgba(148, 190, 255, 0.055);
+  --card-strong: rgba(22, 32, 56, 0.72);
+  --card-border: rgba(125, 190, 255, 0.14);
+  --card-edge: rgba(140, 220, 255, 0.30);
+  --cyan: #38e1ff;
+  --blue: #6366f1;
+  --violet: #a855f7;
+  --brand-3: #ff5fa8;
+  --gold: #ffc45c;
+  --gold-deep: #f59e0b;
+  --gold-soft: rgba(255, 196, 92, 0.13);
+  --txt: #e8f1ff;
+  --txt-dim: #93a9cc;
+  --txt-faint: #5d7399;
+  --accent: #6366f1;
+  --good: #3fe0a8;
+  --warn: #ffc45c;
+  --bad: #ff7a8a;
+  --shadow: 0 14px 44px rgba(2, 8, 26, 0.55), 0 0 0 1px rgba(96, 140, 255, 0.06);
+  --radius: 22px;
+  --grad-main: linear-gradient(135deg, #22d3ee 0%, #6366f1 50%, #a855f7 100%);
+  --glow-cyan: rgba(56, 225, 255, 0.35);
+  --glow-blue: rgba(99, 102, 241, 0.40);
+  --glow-violet: rgba(168, 85, 247, 0.35);
+}
+html.light {
+  --bg-0: #eef4fd;
+  --bg-1: #e3edfa;
+  --bg-2: #d8e6f7;
+  --card: rgba(255, 255, 255, 0.82);
+  --card-strong: #ffffff;
+  --card-border: rgba(45, 100, 190, 0.12);
+  --card-edge: rgba(45, 120, 220, 0.35);
+  --cyan: #0891b2;
+  --blue: #4f46e5;
+  --violet: #7c3aed;
+  --brand-3: #db2777;
+  --gold: #b45309;
+  --gold-deep: #92400e;
+  --gold-soft: rgba(180, 83, 9, 0.10);
+  --txt: #12233f;
+  --txt-dim: #46608c;
+  --txt-faint: #8295b5;
+  --accent: #4f46e5;
+  --good: #059669;
+  --warn: #b45309;
+  --bad: #e11d48;
+  --shadow: 0 14px 40px rgba(30, 80, 160, 0.12);
+  --grad-main: linear-gradient(135deg, #0891b2 0%, #4f46e5 55%, #7c3aed 100%);
+}
+
+html { background: var(--bg-0); }
+html, body, #root { min-height: 100%; }
+html { height: 100%; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "HarmonyOS Sans SC", "Noto Sans SC", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  color: var(--txt);
+  background:
+    radial-gradient(1000px 620px at 85% -12%, rgba(99, 102, 241, 0.22), transparent 62%),
+    radial-gradient(760px 520px at -12% 108%, rgba(168, 85, 247, 0.16), transparent 58%),
+    radial-gradient(620px 400px at 50% 42%, rgba(56, 225, 255, 0.06), transparent 65%),
+    linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 52%, var(--bg-2) 100%);
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+html.light body {
+  background:
+    radial-gradient(1000px 620px at 85% -12%, rgba(79, 70, 229, 0.10), transparent 62%),
+    radial-gradient(760px 520px at -12% 108%, rgba(124, 58, 237, 0.08), transparent 58%),
+    linear-gradient(160deg, var(--bg-0) 0%, var(--bg-1) 55%, var(--bg-2) 100%);
+}
+
+/* 科技网格背景层（固定，38px 与 Flash 一致） */
+body::before {
+  content: "";
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(96, 140, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 140, 255, 0.05) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, rgba(0,0,0,0.92), transparent 76%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, rgba(0,0,0,0.92), transparent 76%);
+}
+html.light body::before {
+  background-image:
+    linear-gradient(rgba(37, 99, 235, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 99, 235, 0.06) 1px, transparent 1px);
+}
+#root { position: relative; z-index: 1; }
+
+* { box-sizing: border-box; }
+button { font-family: inherit; cursor: pointer; }
+input, textarea { font-family: inherit; }
+
+/* ---- 玻璃卡片：靛紫渐变描边 + 顶部高光 ---- */
+.glass {
+  position: relative;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    linear-gradient(160deg, rgba(140, 220, 255, 0.30), rgba(99, 102, 241, 0.16) 38%, rgba(168, 85, 247, 0.10) 62%, rgba(125, 190, 255, 0.06)) border-box;
+  border: 1px solid transparent;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.09);
+}
+.glass-strong {
+  position: relative;
+  background:
+    linear-gradient(var(--card-strong), var(--card-strong)) padding-box,
+    linear-gradient(160deg, rgba(140, 220, 255, 0.36), rgba(99, 102, 241, 0.18) 40%, rgba(168, 85, 247, 0.12) 64%, rgba(125, 190, 255, 0.08)) border-box;
+  border: 1px solid transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.12);
+}
+html.light .glass, html.light .glass-strong {
+  box-shadow: var(--shadow), inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: none; border-radius: 16px; padding: 13px 20px;
+  font-size: 15px; font-weight: 600; color: var(--txt);
+  background: var(--card-strong); transition: transform .12s ease, filter .15s ease, background .15s ease, box-shadow .15s ease;
+  user-select: none;
+}
+.btn:active { transform: scale(0.965); }
+.btn-primary {
+  background: var(--grad-main);
+  color: #fff;
+  box-shadow: 0 8px 26px rgba(76, 130, 255, 0.45), 0 0 18px rgba(77, 201, 255, 0.25);
+  letter-spacing: 0.01em;
+}
+.btn-primary:hover { filter: brightness(1.10); }
+.btn-ghost { background: transparent; border: 1px solid var(--card-border); }
+.btn-danger { background: rgba(255, 122, 138, 0.14); color: var(--bad); border: 1px solid rgba(255, 122, 138, 0.35); }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px; border-radius: 999px; font-size: 13px; font-weight: 500;
+  color: var(--txt-dim); background: var(--card); border: 1px solid var(--card-border);
+  transition: all .15s ease; white-space: nowrap;
+}
+.chip.on {
+  color: #fff; background: var(--grad-main);
+  border-color: transparent; font-weight: 700;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.45);
+}
+html.light .chip.on { color: #ffffff; }
+
+.progress-track { background: rgba(140, 190, 255, 0.12); border-radius: 999px; overflow: hidden; }
+html.light .progress-track { background: rgba(37, 99, 235, 0.10); }
+.progress-fill {
+  background: var(--grad-main);
+  height: 100%; border-radius: 999px; transition: width .5s cubic-bezier(.22,1,.36,1);
+  box-shadow: 0 0 10px var(--glow-cyan);
+}
+
+/* ---- 科技风动效 ---- */
+@keyframes floatIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes popIn { from { opacity: 0; transform: scale(0.92); } to { opacity: 1; transform: scale(1); } }
+@keyframes flipIn { from { opacity: 0; transform: rotateY(90deg); } to { opacity: 1; transform: none; } }
+@keyframes shakeX { 0%,100% { transform: translateX(0); } 25% { transform: translateX(-7px); } 75% { transform: translateX(7px); } }
+@keyframes pulseGlow { 0%,100% { box-shadow: 0 0 0 0 var(--glow-cyan); } 50% { box-shadow: 0 0 0 14px rgba(56, 225, 255, 0); } }
+@keyframes scanMove { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+@keyframes orbFloat { 0%,100% { transform: translate(0, 0) scale(1); } 50% { transform: translate(12px, -14px) scale(1.08); } }
+@keyframes sheenMove { 0%, 55% { transform: translateX(-130%); } 85%, 100% { transform: translateX(130%); } }
+.anim-in { animation: floatIn .4s cubic-bezier(.22,1,.36,1) both; }
+.anim-pop { animation: popIn .3s cubic-bezier(.22,1,.36,1) both; }
+.anim-flip { animation: flipIn .35s cubic-bezier(.22,1,.36,1) both; }
+.anim-shake { animation: shakeX .4s ease both; }
+.anim-glow { animation: pulseGlow 2.2s ease-in-out infinite; }
+
+/* logo 流光（仿 Flash .brand-logo::after） */
+.sheen-layer {
+  position: absolute; inset: 0; overflow: hidden; border-radius: inherit;
+  pointer-events: none;
+}
+.sheen-layer::after {
+  content: "";
+  position: absolute; top: 0; bottom: 0; left: 0; width: 42%;
+  background: linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.20) 48%, transparent 62%);
+  animation: sheenMove 4.5s ease-in-out infinite;
+}
+/* 品牌渐变字（仿 Flash .brand-name） */
+.brand-grad {
+  background: linear-gradient(90deg, #cfe9ff, #b7a6ff);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* 霓虹渐变文字 */
+.neon-text {
+  background: var(--grad-main);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+/* 图标微光容器 */
+.icon-tile {
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 14px;
+  background: linear-gradient(150deg, var(--gold-soft), rgba(157, 123, 255, 0.10));
+  border: 1px solid rgba(125, 190, 255, 0.25);
+  color: var(--cyan);
+  box-shadow: inset 0 0 12px rgba(56, 225, 255, 0.10), 0 6px 18px rgba(2, 8, 20, 0.35);
+}
+html.light .icon-tile { box-shadow: inset 0 0 10px rgba(37, 99, 235, 0.06), 0 4px 14px rgba(30, 80, 160, 0.10); }
+
+/* 扫描线装饰（卡片内 hover 光扫） */
+.scan-card { position: relative; overflow: hidden; }
+.scan-card::after {
+  content: "";
+  position: absolute; left: 0; right: 0; top: 0; height: 46%;
+  background: linear-gradient(180deg, rgba(120, 210, 255, 0.09), transparent);
+  opacity: 0; transition: opacity .25s ease; pointer-events: none;
+}
+.scan-card:hover::after { opacity: 1; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(140, 190, 255, 0.18); border-radius: 8px; }
+html.light ::-webkit-scrollbar-thumb { background: rgba(37, 99, 235, 0.18); }
+
+.safe-bottom { padding-bottom: env(safe-area-inset-bottom, 0px); }
+
+/* ---- 3D 翻卡（仿 Flash word-card 并超越：grid 重叠 + 内容自适应高度） ---- */
+.flip3d {
+  display: grid;
+  perspective: 1400px;
+  width: 100%;
+}
+.flip3d > .flip-face {
+  grid-area: 1 / 1;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.22, 0.9, 0.3, 1);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.flip3d > .flip-front { transform: rotateY(0deg); }
+.flip3d > .flip-back { transform: rotateY(180deg); }
+.flip3d.flipped > .flip-front { transform: rotateY(-180deg); }
+.flip3d.flipped > .flip-back { transform: rotateY(0deg); }
+.flip3d.flipped > .flip-front, .flip3d:not(.flipped) > .flip-back { pointer-events: none; }
