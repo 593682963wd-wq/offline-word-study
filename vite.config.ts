@@ -5,6 +5,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
   base: './',
+  build: { license: { fileName: 'THIRD-PARTY-LICENSES.md' } },
   server:{host:'127.0.0.1',port:Number(process.env.PORT ?? 5173)},
   preview:{host:'127.0.0.1',port:Number(process.env.PORT ?? 4173)},
   plugins: [
