@@ -25,4 +25,4 @@ PORT=4173 npm start
 
 Docker默认只向 `127.0.0.1` 发布端口；扩大监听需在显式环境中设置 `BIND_ADDRESS`，并按真实入口设置 `PUBLIC_ORIGIN` 和访问保护。脚本不自动提供认证。
 
-构建输出中的 `THIRD-PARTY-LICENSES.md` 收录网页打包依赖的许可声明，`WORKBOX-LICENSE.txt` 保留离线服务工作线程使用的 Workbox 声明。分发构建产物时一并保留这两个文件。
+构建输出中的 `THIRD-PARTY-LICENSES.md` 收录网页打包依赖的许可声明，`WORKBOX-LICENSE.txt` 保留离线服务工作线程使用的 Workbox 声明。Dexie 的 NOTICE 与 Tailwind CSS 的 MIT 声明收录在 `ADDITIONAL-NOTICES.txt`。分发构建产物时保留这三个文件。
